@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-
+import HemisphereDisplay from './components/HemisphereDisplay';
 
 class App extends React.Component{
 
@@ -23,7 +23,7 @@ class App extends React.Component{
     }
 
     if(!this.state.errorMessage && this.state.latitude){
-      return <div>{this.state.latitude}</div>
+      return <div><HemisphereDisplay latitude={this.state.latitude}/></div>
     }
 
     else{
